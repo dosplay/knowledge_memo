@@ -2,23 +2,23 @@
 # 指数分布族
 
 $$
-\begin{align}
+\begin{aligned}
 p(y|n) = h(y) \cdot g(\eta) \cdot exp\{ \eta^T T(y) \}
-\end{align}
+\end{aligned}
 $$
 其中$\eta$是分布的自然参数，$\mu(y)$是充分统计量，通常$\mu(y)=y$，当参数h、g、T都固定时，就是关于$\mu(y)$的函数族
 
 下面分别介绍伯努利分布和高斯分布，分别把它们表示成指数分布族的形式
 
 ## 伯努利分布
-伯努利分布是对0、1问题进行建模，对于一个伯努利分布$Bernoulli(\psi), y \in \lbrace 0,1\rbrace$， 有$p(y=1|\psi) = \psi, p(y=0|\psi) = 1-\psi$，
+伯努利分布是对0、1问题进行建模，对于一个伯努利分布$Bernoulli(\psi), y \in \lbrace 0,1\rbrace$， 有$p(y=1|\psi) = \psi, p(y=0|\psi) = 1-\psi$，则
 $$
-\begin{align}
+\begin{aligned}
 P(y|\psi) & = \psi^y(1-\psi)^{1-y}= exp(\log \psi^y(1-\psi)^{1-y}) \\
 & = exp(y\log \psi + (1-y)\log (1-\psi)) \\
 & = exp(y\log \frac{\psi}{1-\psi} + \log(1-\psi))\\
 & = (1-\psi)exp(y\log \frac{\psi}{1-\psi})
-\end{align}
+\end{aligned}
 $$
 对应到指数分布族:
 
